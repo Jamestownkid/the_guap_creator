@@ -2,7 +2,7 @@
 ONE-LINE INSTALL COMMANDS FOR USERS
 ================================================================================
 
-NO API KEYS NEEDED! FREE! WORKS OFFLINE!
+EASY DESKTOP APP WITH SETUP WIZARD!
 
 ================================================================================
 LINUX (Ubuntu/Pop!_OS/Debian)
@@ -55,14 +55,13 @@ cd %USERPROFILE%\Downloads\wikipedia-autovideo-master && run-gui.bat
 WHAT'S DIFFERENT NOW
 ================================================================================
 
-✅ NO AWS POLLY - Uses free local speech (MaryTTS)
-✅ NO PIXABAY API - Uses Wikipedia images only  
-✅ NO API KEYS AT ALL - Zero setup
-✅ NO COSTS - Completely free
-✅ WORKS OFFLINE - After first build
+✅ DESKTOP GUI - No more command line!
+✅ SETUP WIZARD - Easy API key configuration
+✅ PROGRESS TRACKING - See what's happening
 ✅ FIXES GRAPHICS BUGS - Launcher handles JavaFX issues automatically
+✅ ONE-CLICK LAUNCH - Just run the script
 
-Just download, build, run. That's it.
+First time you'll need API keys (Pixabay + AWS), but the wizard helps with that.
 
 
 ================================================================================

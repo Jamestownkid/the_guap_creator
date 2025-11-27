@@ -1,6 +1,6 @@
-# Super Simple Install - No API Keys Needed!
+# Super Simple Install
 
-This version uses **FREE local text-to-speech** - no AWS account, no costs, no API keys!
+Desktop GUI for creating Wikipedia videos with easy setup!
 
 ## Linux (Ubuntu/Pop!_OS/Debian)
 
@@ -23,7 +23,7 @@ chmod +x run-gui.sh
 ./run-gui.sh
 ```
 
-That's it! No setup wizard, no API keys, just works.
+That's it! A setup wizard will guide you through entering your API keys on first run.
 
 ## Windows
 
@@ -39,7 +39,7 @@ mvn clean package
 run-gui.bat
 ```
 
-Done! No API keys needed.
+Done! The GUI will open and show a setup wizard for API keys.
 
 ## Using It
 
@@ -49,16 +49,22 @@ Done! No API keys needed.
 4. Click Generate
 5. Wait for your video
 
-**No costs, no API keys, completely free and offline!**
+## Getting API Keys
 
-## What Changed?
+You'll need (one-time setup):
 
-- ✅ Uses MaryTTS (free, local text-to-speech)
-- ✅ No AWS Polly (no costs!)
-- ✅ No Pixabay API needed
-- ✅ Works completely offline after first build
+1. **Pixabay API Key** (free): https://pixabay.com/api/docs/
+2. **AWS Credentials** (costs ~$0.30 per article): https://aws.amazon.com/polly/
+
+The GUI wizard walks you through this on first run.
+
+## What's New?
+
+- ✅ Desktop GUI instead of command-line
+- ✅ Setup wizard for easy configuration  
 - ✅ Automatic fix for JavaFX graphics issues
-- ✅ Just run the script, that's it
+- ✅ Progress tracking
+- ✅ One-click launcher
 
 ## Troubleshooting
 

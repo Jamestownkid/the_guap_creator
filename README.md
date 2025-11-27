@@ -1,8 +1,6 @@
-# Wikipedia Autovideo - FREE Desktop Edition
+# Wikipedia Autovideo - Desktop Edition
 
-Automatically create narrated videos from Wikipedia articles - **completely FREE with no API keys needed!**
-
-Uses local text-to-speech, works offline, zero cost.
+Automatically create narrated videos from Wikipedia articles with a user-friendly desktop app!
 
 Example video: https://www.youtube.com/watch?v=IROxKUeGi0c
 
@@ -10,16 +8,15 @@ Example video: https://www.youtube.com/watch?v=IROxKUeGi0c
 
 **Just downloaded this? Read:** **[INSTALL_SIMPLE.md](INSTALL_SIMPLE.md)**
 
-One command block, no API keys, no setup, just works.
+One command block, launches GUI, easy setup.
 
 ## What Makes This Easy
 
-- ✅ **FREE** - No AWS, no Polly, no API costs
-- ✅ **No API Keys** - Uses local text-to-speech (MaryTTS)
-- ✅ **Works Offline** - After first build, everything is local
-- ✅ **Desktop GUI** - User-friendly JavaFX application
-- ✅ **One-Click Launch** - Run script, app opens, done
+- ✅ **Desktop GUI** - User-friendly JavaFX application  
+- ✅ **One-Click Launch** - Run script, app opens
 - ✅ **Auto-Fixes Graphics Issues** - Launcher handles JavaFX problems
+- ✅ **Setup Wizard** - Guides you through API key setup
+- ✅ **Progress Tracking** - See what's happening in real-time
 
 ## Linux Quick Start
 
