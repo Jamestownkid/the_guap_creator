@@ -1,31 +1,47 @@
-# Wikipedia Autovideo - Desktop Edition
+# Wikipedia Autovideo - FREE Desktop Edition
 
-This Java program automatically creates narrated videos starting from Wikipedia pages, using images from the page itself and other sources
-(Pixabay), and doing speech synthesis for the text using Amazon Polly API.
+Automatically create narrated videos from Wikipedia articles - **completely FREE with no API keys needed!**
 
-**NEW:** Now includes a full JavaFX desktop GUI with installers for Windows and Linux! No more command-line required.
+Uses local text-to-speech, works offline, zero cost.
 
 Example video: https://www.youtube.com/watch?v=IROxKUeGi0c
-Read more: [How it works](https://aileftech.wordpress.com/2020/04/29/turn-any-wikipedia-article-into-a-video-automatically/)
 
-## Quick Install
+## 🚀 SUPER SIMPLE INSTALL
 
-**For Linux users who just downloaded this:**
-See **[INSTALL_LINUX.md](INSTALL_LINUX.md)** for simple copy-paste instructions.
+**Just downloaded this? Read:** **[INSTALL_SIMPLE.md](INSTALL_SIMPLE.md)**
 
-**For Windows users who just downloaded this:**
-See **[INSTALL_WINDOWS.md](INSTALL_WINDOWS.md)** for simple copy-paste instructions.
+One command block, no API keys, no setup, just works.
 
-## What's New
+## What Makes This Easy
 
-- **Desktop GUI** - User-friendly JavaFX application
-- **Windows Installer** - Standard .exe installer with bundled Java
-- **Linux Package** - .deb package for Ubuntu/Debian/Pop!_OS
-- **No manual config editing** - Setup wizard on first run
-- **Real-time progress** - See what's happening during video generation
-- **Better error handling** - Clear messages instead of crashes
+- ✅ **FREE** - No AWS, no Polly, no API costs
+- ✅ **No API Keys** - Uses local text-to-speech (MaryTTS)
+- ✅ **Works Offline** - After first build, everything is local
+- ✅ **Desktop GUI** - User-friendly JavaFX application
+- ✅ **One-Click Launch** - Run script, app opens, done
+- ✅ **Auto-Fixes Graphics Issues** - Launcher handles JavaFX problems
 
-The original command-line interface still works for power users.
+## Linux Quick Start
+
+```bash
+sudo apt update && sudo apt install -y openjdk-17-jdk maven ffmpeg libgtk-3-0
+cd ~/Downloads/wikipedia-autovideo-master
+mvn clean package
+chmod +x run-gui.sh
+./run-gui.sh
+```
+
+## Windows Quick Start
+
+Install Java 17, Maven, FFmpeg (add to PATH), then:
+
+```
+cd %USERPROFILE%\Downloads\wikipedia-autovideo-master
+mvn clean package
+run-gui.bat
+```
+
+Full instructions: [INSTALL_SIMPLE.md](INSTALL_SIMPLE.md)
 
 # How to Run
 
@@ -62,9 +78,13 @@ This retrieves the New York Wikipedia page and creates the video using Amazon ne
 Use `standard` instead of `neural` for cheaper (but lower quality) audio.
 
 ## Dependencies
-This tool uses `ffmpeg`, so you need it installed with a version that's compatible with the ffmpeg filters that we are using. Can't tell an exact number but any version released after 2020 should be ok.
 
-Also, to perform image conversions (e.g. SVG to JPG) the tool uses the `convert` command from `imagemagick`.
+- **Java 11+** (Java 17 recommended)
+- **Maven** (for building)
+- **FFmpeg** (for video rendering)
+- **Graphics libraries** (usually already installed): libgtk-3-0, libgl1-mesa-glx
+
+That's it! No API keys, no accounts, no costs.
 
 ## Output
 The program outputs is stored in the `output/final` directory. As the program runs, you will see files like `video.final.0.mp4`, `video.final.1.mp4` in the output directory: 

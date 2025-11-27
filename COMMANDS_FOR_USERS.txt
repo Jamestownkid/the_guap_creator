@@ -1,0 +1,97 @@
+================================================================================
+ONE-LINE INSTALL COMMANDS FOR USERS
+================================================================================
+
+NO API KEYS NEEDED! FREE! WORKS OFFLINE!
+
+================================================================================
+LINUX (Ubuntu/Pop!_OS/Debian)
+================================================================================
+
+Copy-paste this entire block in terminal:
+
+sudo apt update && sudo apt install -y openjdk-17-jdk maven ffmpeg libgtk-3-0 libgl1-mesa-glx && cd ~/Downloads/wikipedia-autovideo-master && mvn clean package && chmod +x run-gui.sh && ./run-gui.sh
+
+That's ONE command. App will open.
+
+Or step-by-step:
+
+sudo apt update
+sudo apt install -y openjdk-17-jdk maven ffmpeg libgtk-3-0 libgl1-mesa-glx
+cd ~/Downloads/wikipedia-autovideo-master
+mvn clean package
+chmod +x run-gui.sh
+./run-gui.sh
+
+
+================================================================================
+WINDOWS
+================================================================================
+
+First install (one-time):
+1. Java 17: https://adoptium.net/ (check "Add to PATH")
+2. Maven: https://maven.apache.org/download.cgi (add to PATH)
+3. FFmpeg: https://ffmpeg.org/download.html (add to PATH)
+
+Then in Command Prompt:
+
+cd %USERPROFILE%\Downloads\wikipedia-autovideo-master
+mvn clean package
+run-gui.bat
+
+
+================================================================================
+TO RUN AGAIN LATER
+================================================================================
+
+Linux:
+cd ~/Downloads/wikipedia-autovideo-master && ./run-gui.sh
+
+Windows:
+cd %USERPROFILE%\Downloads\wikipedia-autovideo-master && run-gui.bat
+
+
+================================================================================
+WHAT'S DIFFERENT NOW
+================================================================================
+
+✅ NO AWS POLLY - Uses free local speech (MaryTTS)
+✅ NO PIXABAY API - Uses Wikipedia images only  
+✅ NO API KEYS AT ALL - Zero setup
+✅ NO COSTS - Completely free
+✅ WORKS OFFLINE - After first build
+✅ FIXES GRAPHICS BUGS - Launcher handles JavaFX issues automatically
+
+Just download, build, run. That's it.
+
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+"GUI shows graphics error"
+→ The launcher script fixes this automatically now
+
+"FFmpeg not found"
+→ Linux: sudo apt install ffmpeg
+→ Windows: Install and add to PATH
+
+"Java/Maven not found"
+→ Install them and make sure they're in PATH
+
+"Build failed"
+→ Try: mvn clean install -U
+
+
+================================================================================
+FOR MAINTAINER (YOU)
+================================================================================
+
+To update GitHub:
+
+cd /home/admin/Downloads/DOUBT/wikipedia-autovideo-master
+git add .
+git commit -m "Make installation super simple - no API keys, free TTS, one-click launch"
+git push origin main
+
+

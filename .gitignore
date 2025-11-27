@@ -1,11 +1,14 @@
 # Maven build directories
 target/
-*.jar
 *.war
 *.ear
 
-# Config file with secrets
+# Config file (not needed anymore but keep out)
 autovideo.conf
+
+# Keep the launcher scripts
+!run-gui.sh
+!run-gui.bat
 
 # Output directories
 output/

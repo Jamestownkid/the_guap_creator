@@ -41,11 +41,16 @@
 			<artifactId>gson</artifactId>
 			<version>2.8.6</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-polly -->
+		<!-- MaryTTS - Free local text-to-speech (replaces AWS Polly) -->
 		<dependency>
-			<groupId>com.amazonaws</groupId>
-			<artifactId>aws-java-sdk-polly</artifactId>
-			<version>1.11.762</version>
+			<groupId>de.dfki.mary</groupId>
+			<artifactId>marytts-runtime</artifactId>
+			<version>5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>de.dfki.mary</groupId>
+			<artifactId>voice-cmu-slt-hsmm</artifactId>
+			<version>5.2</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.googlecode.soundlibs/jlayer -->
 		<dependency>
