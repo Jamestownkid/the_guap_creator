@@ -58,11 +58,6 @@ public class WikipediaAutovideoApp extends Application {
     public void start(Stage primaryStage) {
         service = new WikipediaVideoService();
         
-        // Check if config exists, if not show setup wizard
-        if (!ConfigManager.configExists()) {
-            showSetupWizard(primaryStage);
-        }
-        
         primaryStage.setTitle("Wikipedia Autovideo Generator");
         
         VBox root = new VBox(15);
@@ -83,6 +78,11 @@ public class WikipediaAutovideoApp extends Application {
         Scene scene = new Scene(root, 800, 700);
         primaryStage.setScene(scene);
         primaryStage.show();
+        
+        // Check if config exists AFTER stage is shown, then show setup wizard
+        if (!ConfigManager.configExists()) {
+            Platform.runLater(() -> showSetupWizard(primaryStage));
+        }
     }
     
     private VBox createBasicControlsSection() {
