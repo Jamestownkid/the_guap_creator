@@ -1,0 +1,125 @@
+================================================================================
+COPY-PASTE COMMANDS FOR USERS WHO DOWNLOAD FROM GITHUB
+================================================================================
+
+When someone downloads and unzips your project to their Downloads folder,
+give them these commands based on their operating system:
+
+================================================================================
+FOR LINUX USERS (Ubuntu/Debian/Pop!_OS)
+================================================================================
+
+Open Terminal and paste these commands one by one:
+
+# Install prerequisites
+sudo apt update
+sudo apt install openjdk-17-jdk maven ffmpeg -y
+
+# Go to the project folder
+cd ~/Downloads/wikipedia-autovideo-master
+
+# Build it
+mvn clean package
+
+# Run the GUI app
+java -jar target/autovideo-0.0.1-SNAPSHOT-gui.jar
+
+That's it! The app will open and show a setup wizard for entering API keys.
+
+Alternative - tell them to read: INSTALL_LINUX.md
+
+
+================================================================================
+FOR WINDOWS USERS
+================================================================================
+
+Tell them to:
+1. Install Java 17 from: https://adoptium.net/
+2. Install Maven from: https://maven.apache.org/download.cgi
+3. Install FFmpeg from: https://ffmpeg.org/download.html
+   (Make sure to add all three to Windows PATH during installation)
+
+4. Open Command Prompt and paste:
+
+cd %USERPROFILE%\Downloads\wikipedia-autovideo-master
+mvn clean package
+java -jar target\autovideo-0.0.1-SNAPSHOT-gui.jar
+
+That's it! The app will open and show a setup wizard for entering API keys.
+
+Alternative - tell them to read: INSTALL_WINDOWS.md
+
+
+================================================================================
+WHAT TO TELL THEM ABOUT API KEYS
+================================================================================
+
+They need two things:
+
+1. PIXABAY API KEY (free):
+   - Sign up at https://pixabay.com/
+   - Get key from https://pixabay.com/api/docs/
+
+2. AWS CREDENTIALS (costs money):
+   - Sign up at https://aws.amazon.com/
+   - Create IAM user with AmazonPollyFullAccess
+   - Generate access keys
+   - They'll need: Access Key ID, Secret Access Key, and Region (like us-east-1)
+
+WARNING: AWS Polly charges money. About $0.30 per typical article with neural voices.
+Tell them to set up billing alerts.
+
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+"Maven build failed"
+→ Try: mvn clean install -U
+
+"FFmpeg not found"
+→ Linux: sudo apt install ffmpeg -y
+→ Windows: Install ffmpeg and add to PATH, then restart terminal
+
+"GUI won't launch"
+→ Check Java version: java -version (needs 11+)
+→ If Java 8: They need to upgrade to Java 11 or higher
+
+"jpackage not found" (if building installers)
+→ Need JDK 17+, not just JRE
+
+
+================================================================================
+WHAT THE APP DOES
+================================================================================
+
+1. User enters a Wikipedia article name (like "New_York")
+2. App downloads the article
+3. Gets images from Wikipedia and Pixabay
+4. Generates narrated audio using Amazon Polly
+5. Combines everything into an MP4 video using FFmpeg
+6. Saves to chosen output directory
+
+
+================================================================================
+QUICK REFERENCE FOR YOU TO SHARE
+================================================================================
+
+Linux one-liner after installing prereqs:
+cd ~/Downloads/wikipedia-autovideo-master && mvn clean package && java -jar target/autovideo-0.0.1-SNAPSHOT-gui.jar
+
+Windows one-liner after installing prereqs:
+cd %USERPROFILE%\Downloads\wikipedia-autovideo-master && mvn clean package && java -jar target\autovideo-0.0.1-SNAPSHOT-gui.jar
+
+
+================================================================================
+FILES TO POINT THEM TO
+================================================================================
+
+INSTALL_LINUX.md - Full Linux installation guide with all details
+INSTALL_WINDOWS.md - Full Windows installation guide with all details
+QUICKSTART.md - Fast reference for developers
+BUILD.md - Detailed build instructions including making installers
+README.md - Main project readme with overview
+
+

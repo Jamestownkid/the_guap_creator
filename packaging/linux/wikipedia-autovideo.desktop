@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Wikipedia Autovideo
+Comment=Generate narrated videos from Wikipedia articles
+Exec=/opt/wikipedia-autovideo/bin/wikipedia-autovideo
+Icon=wikipedia-autovideo
+Terminal=false
+Categories=AudioVideo;Video;
+Keywords=wikipedia;video;narration;speech;
+
